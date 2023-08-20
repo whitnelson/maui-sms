@@ -15,5 +15,6 @@ class Ticket extends Model
         'body',
         'status',
         'everything',
+        'from'
     ];
 }
