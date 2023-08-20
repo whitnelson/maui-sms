@@ -20,7 +20,7 @@ task :install do
 			execute :ln, "-s #{shared_path}/storage #{release_path}/storage"
             execute :composer, "install --quiet --optimize-autoloader"
             execute :chmod, "u+x artisan" # make artisan executable
-            execute :php, "artisan migrate --force"
+            #execute :php, "artisan migrate --force"
         end
     end
 end

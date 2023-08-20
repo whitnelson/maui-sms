@@ -14,7 +14,8 @@ class TicketController extends Controller
         $body = $request->Text;
 
         $ticket = Ticket::create([
-            'body' => $body
+            'body' => $body,
+            'status' => 'new'
         ]);
 
         /*

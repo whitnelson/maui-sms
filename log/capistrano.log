@@ -1119,3 +1119,169 @@ found 0 vulnerabilities
   INFO [d412daaa] Running /usr/bin/env echo "Branch main (at 295b264a70c931ea5b347208dac01d864cc4a386) deployed as release 20230820163123 by admin" >> /var/www/mauisms.com/revisions.log as root@45.79.24.69
  DEBUG [d412daaa] Command: cd /var/www/mauisms.com/releases && /usr/bin/env echo "Branch main (at 295b264a70c931ea5b347208dac01d864cc4a386) deployed as release 20230820163123 by admin" >> /var/www/mauisms.com/revisions.log
   INFO [d412daaa] Finished in 0.168 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-08-20 12:36:35 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [79d3a351] Running /usr/bin/env mkdir -p /tmp as root@45.79.24.69
+ DEBUG [79d3a351] Command: /usr/bin/env mkdir -p /tmp
+  INFO [79d3a351] Finished in 0.867 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-1dd3f67bdbe8ec260c0f.sh 0.0%
+  INFO Uploading /tmp/git-ssh-1dd3f67bdbe8ec260c0f.sh 100.0%
+  INFO [9319ce79] Running /usr/bin/env chmod 700 /tmp/git-ssh-1dd3f67bdbe8ec260c0f.sh as root@45.79.24.69
+ DEBUG [9319ce79] Command: /usr/bin/env chmod 700 /tmp/git-ssh-1dd3f67bdbe8ec260c0f.sh
+  INFO [9319ce79] Finished in 0.087 seconds with exit status 0 (successful).
+  INFO [2af5d0e8] Running /usr/bin/env git ls-remote git@github.com:whitnelson/maui-sms.git HEAD as root@45.79.24.69
+ DEBUG [2af5d0e8] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-1dd3f67bdbe8ec260c0f.sh" ; /usr/bin/env git ls-remote git@github.com:whitnelson/maui-sms.git HEAD )
+ DEBUG [2af5d0e8] 	Warning: Permanently added the ECDSA host key for IP address '140.82.113.4' to the list of known hosts.
+ DEBUG [2af5d0e8] 	3bf64b5435a546c18300ce7b7fed155ba10fb49a	HEAD
+  INFO [2af5d0e8] Finished in 0.797 seconds with exit status 0 (successful).
+  INFO [65e58f20] Running /usr/bin/env mkdir -p /var/www/mauisms.com/shared /var/www/mauisms.com/releases as root@45.79.24.69
+ DEBUG [65e58f20] Command: /usr/bin/env mkdir -p /var/www/mauisms.com/shared /var/www/mauisms.com/releases
+  INFO [65e58f20] Finished in 0.085 seconds with exit status 0 (successful).
+ DEBUG [413625a4] Running [ -f /var/www/mauisms.com/current/REVISION ] as root@45.79.24.69
+ DEBUG [413625a4] Command: [ -f /var/www/mauisms.com/current/REVISION ]
+ DEBUG [413625a4] Finished in 0.129 seconds with exit status 0 (successful).
+ DEBUG [708042c1] Running /usr/bin/env cat /var/www/mauisms.com/current/REVISION 2>/dev/null as root@45.79.24.69
+ DEBUG [708042c1] Command: /usr/bin/env cat /var/www/mauisms.com/current/REVISION 2>/dev/null
+ DEBUG [708042c1] 	295b264a70c931ea5b347208dac01d864cc4a386
+ DEBUG [708042c1] Finished in 0.090 seconds with exit status 0 (successful).
+ DEBUG [85e551cf] Running [ -f /var/www/mauisms.com/repo/HEAD ] as root@45.79.24.69
+ DEBUG [85e551cf] Command: [ -f /var/www/mauisms.com/repo/HEAD ]
+ DEBUG [85e551cf] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/mauisms.com/repo
+ DEBUG [223a68fd] Running if test ! -d /var/www/mauisms.com/repo; then echo "Directory does not exist '/var/www/mauisms.com/repo'" 1>&2; false; fi as root@45.79.24.69
+ DEBUG [223a68fd] Command: if test ! -d /var/www/mauisms.com/repo; then echo "Directory does not exist '/var/www/mauisms.com/repo'" 1>&2; false; fi
+ DEBUG [223a68fd] Finished in 0.083 seconds with exit status 0 (successful).
+  INFO [b05698a6] Running /usr/bin/env git remote set-url origin git@github.com:whitnelson/maui-sms.git as root@45.79.24.69
+ DEBUG [b05698a6] Command: cd /var/www/mauisms.com/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-1dd3f67bdbe8ec260c0f.sh" ; /usr/bin/env git remote set-url origin git@github.com:whitnelson/maui-sms.git )
+  INFO [b05698a6] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [a9c226f5] Running /usr/bin/env git remote update --prune as root@45.79.24.69
+ DEBUG [a9c226f5] Command: cd /var/www/mauisms.com/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-1dd3f67bdbe8ec260c0f.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [a9c226f5] 	Fetching origin
+ DEBUG [a9c226f5] 	From github.com:whitnelson/maui-sms
+ DEBUG [a9c226f5] 	   295b264..3bf64b5  main       -> main
+  INFO [a9c226f5] Finished in 0.780 seconds with exit status 0 (successful).
+ DEBUG [79a5b01d] Running if test ! -d /var/www/mauisms.com/repo; then echo "Directory does not exist '/var/www/mauisms.com/repo'" 1>&2; false; fi as root@45.79.24.69
+ DEBUG [79a5b01d] Command: if test ! -d /var/www/mauisms.com/repo; then echo "Directory does not exist '/var/www/mauisms.com/repo'" 1>&2; false; fi
+ DEBUG [79a5b01d] Finished in 0.083 seconds with exit status 0 (successful).
+  INFO [d3d249d1] Running /usr/bin/env mkdir -p /var/www/mauisms.com/releases/20230820163637 as root@45.79.24.69
+ DEBUG [d3d249d1] Command: cd /var/www/mauisms.com/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-1dd3f67bdbe8ec260c0f.sh" ; /usr/bin/env mkdir -p /var/www/mauisms.com/releases/20230820163637 )
+  INFO [d3d249d1] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO [acaccd1c] Running /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /var/www/mauisms.com/releases/20230820163637 as root@45.79.24.69
+ DEBUG [acaccd1c] Command: cd /var/www/mauisms.com/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-1dd3f67bdbe8ec260c0f.sh" ; /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /var/www/mauisms.com/releases/20230820163637 )
+  INFO [acaccd1c] Finished in 0.119 seconds with exit status 0 (successful).
+ DEBUG [b510a22a] Running if test ! -d /var/www/mauisms.com/repo; then echo "Directory does not exist '/var/www/mauisms.com/repo'" 1>&2; false; fi as root@45.79.24.69
+ DEBUG [b510a22a] Command: if test ! -d /var/www/mauisms.com/repo; then echo "Directory does not exist '/var/www/mauisms.com/repo'" 1>&2; false; fi
+ DEBUG [b510a22a] Finished in 0.164 seconds with exit status 0 (successful).
+ DEBUG [1ffb41a6] Running /usr/bin/env git rev-list --max-count=1 main as root@45.79.24.69
+ DEBUG [1ffb41a6] Command: cd /var/www/mauisms.com/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-1dd3f67bdbe8ec260c0f.sh" ; /usr/bin/env git rev-list --max-count=1 main )
+ DEBUG [1ffb41a6] 	3bf64b5435a546c18300ce7b7fed155ba10fb49a
+ DEBUG [1ffb41a6] Finished in 0.086 seconds with exit status 0 (successful).
+ DEBUG [08b9aed5] Running if test ! -d /var/www/mauisms.com/releases/20230820163637; then echo "Directory does not exist '/var/www/mauisms.com/releases/20230820163637'" 1>&2; false; fi as root@45.79.24.69
+ DEBUG [08b9aed5] Command: if test ! -d /var/www/mauisms.com/releases/20230820163637; then echo "Directory does not exist '/var/www/mauisms.com/releases/20230820163637'" 1>&2; false; fi
+ DEBUG [08b9aed5] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [7316250e] Running /usr/bin/env echo "3bf64b5435a546c18300ce7b7fed155ba10fb49a" > REVISION as root@45.79.24.69
+ DEBUG [7316250e] Command: cd /var/www/mauisms.com/releases/20230820163637 && /usr/bin/env echo "3bf64b5435a546c18300ce7b7fed155ba10fb49a" > REVISION
+  INFO [7316250e] Finished in 0.083 seconds with exit status 0 (successful).
+  INFO [f4defd1f] Running /usr/bin/env ln -s /var/protected/env/mauisms.production.env /var/www/mauisms.com/releases/20230820163637/.env as root@45.79.24.69
+ DEBUG [f4defd1f] Command: /usr/bin/env ln -s /var/protected/env/mauisms.production.env /var/www/mauisms.com/releases/20230820163637/.env
+  INFO [f4defd1f] Finished in 0.125 seconds with exit status 0 (successful).
+ DEBUG [907d07ed] Running if test ! -d /var/www/mauisms.com/releases/20230820163637; then echo "Directory does not exist '/var/www/mauisms.com/releases/20230820163637'" 1>&2; false; fi as root@45.79.24.69
+ DEBUG [907d07ed] Command: if test ! -d /var/www/mauisms.com/releases/20230820163637; then echo "Directory does not exist '/var/www/mauisms.com/releases/20230820163637'" 1>&2; false; fi
+ DEBUG [907d07ed] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [57e27ed8] Running /usr/bin/env ln -s /var/www/mauisms.com/shared/storage /var/www/mauisms.com/releases/20230820163637/storage as root@45.79.24.69
+ DEBUG [57e27ed8] Command: cd /var/www/mauisms.com/releases/20230820163637 && /usr/bin/env ln -s /var/www/mauisms.com/shared/storage /var/www/mauisms.com/releases/20230820163637/storage
+  INFO [57e27ed8] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [e8cdf4ad] Running /usr/bin/env composer install --quiet --optimize-autoloader as root@45.79.24.69
+ DEBUG [e8cdf4ad] Command: cd /var/www/mauisms.com/releases/20230820163637 && /usr/bin/env composer install --quiet --optimize-autoloader
+  INFO [e8cdf4ad] Finished in 4.079 seconds with exit status 0 (successful).
+  INFO [e495ca64] Running /usr/bin/env chmod u+x artisan as root@45.79.24.69
+ DEBUG [e495ca64] Command: cd /var/www/mauisms.com/releases/20230820163637 && /usr/bin/env chmod u+x artisan
+  INFO [e495ca64] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [0dfdbf9c] Running /usr/bin/env php artisan migrate --force as root@45.79.24.69
+ DEBUG [0dfdbf9c] Command: cd /var/www/mauisms.com/releases/20230820163637 && /usr/bin/env php artisan migrate --force
+ DEBUG [0dfdbf9c] 	Nothing to migrate.
+  INFO [0dfdbf9c] Finished in 0.220 seconds with exit status 0 (successful).
+ DEBUG [2b6b6812] Running if test ! -d /var/www/mauisms.com/releases/20230820163637; then echo "Directory does not exist '/var/www/mauisms.com/releases/20230820163637'" 1>&2; false; fi as root@45.79.24.69
+ DEBUG [2b6b6812] Command: if test ! -d /var/www/mauisms.com/releases/20230820163637; then echo "Directory does not exist '/var/www/mauisms.com/releases/20230820163637'" 1>&2; false; fi
+ DEBUG [2b6b6812] Finished in 0.157 seconds with exit status 0 (successful).
+  INFO [9d31d1f9] Running /usr/bin/env chmod -R 777 storage/ as root@45.79.24.69
+ DEBUG [9d31d1f9] Command: cd /var/www/mauisms.com/releases/20230820163637 && /usr/bin/env chmod -R 777 storage/
+  INFO [9d31d1f9] Finished in 0.086 seconds with exit status 0 (successful).
+  INFO [04b63189] Running /usr/bin/env chmod -R 777 bootstrap/cache as root@45.79.24.69
+ DEBUG [04b63189] Command: cd /var/www/mauisms.com/releases/20230820163637 && /usr/bin/env chmod -R 777 bootstrap/cache
+  INFO [04b63189] Finished in 0.164 seconds with exit status 0 (successful).
+ DEBUG [bdbc86a1] Running if test ! -d /var/www/mauisms.com/releases/20230820163637; then echo "Directory does not exist '/var/www/mauisms.com/releases/20230820163637'" 1>&2; false; fi as root@45.79.24.69
+ DEBUG [bdbc86a1] Command: if test ! -d /var/www/mauisms.com/releases/20230820163637; then echo "Directory does not exist '/var/www/mauisms.com/releases/20230820163637'" 1>&2; false; fi
+ DEBUG [bdbc86a1] Finished in 0.084 seconds with exit status 0 (successful).
+  INFO [4e348a99] Running cd /var/www/mauisms.com/releases/20230820163637 && source ~/.nvm/nvm.sh && npm install && npm run prod as root@45.79.24.69
+ DEBUG [4e348a99] Command: cd /var/www/mauisms.com/releases/20230820163637 && source ~/.nvm/nvm.sh && npm install && npm run prod
+ DEBUG [4e348a99] 	npm
+ DEBUG [4e348a99] 	 
+ DEBUG [4e348a99] 	WARN
+ DEBUG [4e348a99] 	 
+ DEBUG [4e348a99] 	deprecated
+ DEBUG [4e348a99] 	 stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+ DEBUG [4e348a99] 	
+added 781 packages, and audited 782 packages in 8s
+ DEBUG [4e348a99] 	
+ DEBUG [4e348a99] 	84 packages are looking for funding
+ DEBUG [4e348a99] 	  run `npm fund` for details
+ DEBUG [4e348a99] 	
+found 0 vulnerabilities
+ DEBUG [4e348a99] 	
+> prod
+> npm run production
+
+ DEBUG [4e348a99] 	
+> production
+> mix --production
+
+ DEBUG [4e348a99] 	ℹ Compiling Mix
+ DEBUG [4e348a99] 	
+ DEBUG [4e348a99] 	[1;1H
+ DEBUG [4e348a99] 	[0J
+ DEBUG [4e348a99] 	
+ DEBUG [4e348a99] 	                         
+   Laravel Mix v6.0.49   
+                         
+ DEBUG [4e348a99] 	
+ DEBUG [4e348a99] 	✔ Compiled Successfully in 6375ms
+ DEBUG [4e348a99] 	┌───────────────────────────────────┬───────────┐
+│                              File │ Size      │
+├───────────────────────────────────┼───────────┤
+│                        /js/app.js │ 130 KiB   │
+│            /js/app.js.LICENSE.txt │ 336 bytes │
+│                       css/app.css │ 22.1 KiB  │
+└───────────────────────────────────┴───────────┘
+ DEBUG [4e348a99] 	✔ Mix: Compiled successfully in 6.38s
+ DEBUG [4e348a99] 	webpack compiled successfully
+  INFO [4e348a99] Finished in 16.964 seconds with exit status 0 (successful).
+  INFO [af566b34] Running /usr/bin/env ln -s /var/www/mauisms.com/releases/20230820163637 /var/www/mauisms.com/releases/current as root@45.79.24.69
+ DEBUG [af566b34] Command: /usr/bin/env ln -s /var/www/mauisms.com/releases/20230820163637 /var/www/mauisms.com/releases/current
+  INFO [af566b34] Finished in 0.086 seconds with exit status 0 (successful).
+  INFO [b53cdbc6] Running /usr/bin/env mv /var/www/mauisms.com/releases/current /var/www/mauisms.com as root@45.79.24.69
+ DEBUG [b53cdbc6] Command: /usr/bin/env mv /var/www/mauisms.com/releases/current /var/www/mauisms.com
+  INFO [b53cdbc6] Finished in 0.126 seconds with exit status 0 (successful).
+ DEBUG [194df393] Running /usr/bin/env ls -x /var/www/mauisms.com/releases as root@45.79.24.69
+ DEBUG [194df393] Command: /usr/bin/env ls -x /var/www/mauisms.com/releases
+ DEBUG [194df393] 	20230820160811	20230820161227	20230820161619	20230820162746	20230820163123
+20230820163637
+ DEBUG [194df393] Finished in 0.083 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 45.79.24.69
+ DEBUG [83b1578c] Running [ -d /var/www/mauisms.com/current ] as root@45.79.24.69
+ DEBUG [83b1578c] Command: [ -d /var/www/mauisms.com/current ]
+ DEBUG [83b1578c] Finished in 0.125 seconds with exit status 0 (successful).
+ DEBUG [003677da] Running /usr/bin/env readlink /var/www/mauisms.com/current as root@45.79.24.69
+ DEBUG [003677da] Command: /usr/bin/env readlink /var/www/mauisms.com/current
+ DEBUG [003677da] 	/var/www/mauisms.com/releases/20230820163637
+ DEBUG [003677da] Finished in 0.084 seconds with exit status 0 (successful).
+  INFO [f2eacb94] Running /usr/bin/env rm -rf /var/www/mauisms.com/releases/20230820160811 as root@45.79.24.69
+ DEBUG [f2eacb94] Command: /usr/bin/env rm -rf /var/www/mauisms.com/releases/20230820160811
+  INFO [f2eacb94] Finished in 0.471 seconds with exit status 0 (successful).
+ DEBUG [a4f4d9de] Running if test ! -d /var/www/mauisms.com/releases; then echo "Directory does not exist '/var/www/mauisms.com/releases'" 1>&2; false; fi as root@45.79.24.69
+ DEBUG [a4f4d9de] Command: if test ! -d /var/www/mauisms.com/releases; then echo "Directory does not exist '/var/www/mauisms.com/releases'" 1>&2; false; fi
+ DEBUG [a4f4d9de] Finished in 0.084 seconds with exit status 0 (successful).
+  INFO [48fcf906] Running /usr/bin/env echo "Branch main (at 3bf64b5435a546c18300ce7b7fed155ba10fb49a) deployed as release 20230820163637 by admin" >> /var/www/mauisms.com/revisions.log as root@45.79.24.69
+ DEBUG [48fcf906] Command: cd /var/www/mauisms.com/releases && /usr/bin/env echo "Branch main (at 3bf64b5435a546c18300ce7b7fed155ba10fb49a) deployed as release 20230820163637 by admin" >> /var/www/mauisms.com/revisions.log
+  INFO [48fcf906] Finished in 0.130 seconds with exit status 0 (successful).
