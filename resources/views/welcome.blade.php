@@ -417,35 +417,32 @@
 					<a href="{{ route('login') }}"
 						class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
-					@if (Route::has('register'))
-						<a href="{{ route('register') }}"
-							class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-					@endif
-				@endauth
-			</div>
-		@endif
+			@endif
+		@endauth
+	</div>
+	@endif
 
-		<div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-			<div class=" justify-center pt-8 sm:justify-start sm:pt-0">
-				<h1 class="text-gray-700">MauiSMS</h1>
-				<div class="text-gray-300">Send an SMS to 808-501-1060</div>
-				<br /><br />
-				<div class="text-gray-200">
-					The format is as follows:<br />
-					(keep each item on a separate line)
-				</div><br /><br />
-				<div class="text-gray-200"> Contact Name<br />
-					Contact Phone Number<br />
-					Address<br />
-					Condition<br />
-					Notes<br />
-				</div>
-				<br /><br />
-				<a class="btn btn-blue text-gray-200"
-					href="sms:+18085011060?&body=NAME%0aPHONE%0aADDRESS%0aCONDITION%0aNOTES">[SEND SMS]</a>
-
+	<div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+		<div class=" justify-center pt-8 sm:justify-start sm:pt-0">
+			<h1 class="text-gray-700">MauiSMS</h1>
+			<div class="text-gray-300">Send an SMS to 808-501-1060</div>
+			<br /><br />
+			<div class="text-gray-200">
+				The format is as follows:<br />
+				(keep each item on a separate line)
+			</div><br /><br />
+			<div class="text-gray-200"> Contact Name<br />
+				Contact Phone Number<br />
+				Address<br />
+				Condition<br />
+				Notes<br />
 			</div>
+			<br /><br />
+			<a class="btn btn-blue text-gray-200"
+				href="sms:+18085011060?&body=NAME%0aPHONE%0aADDRESS%0aCONDITION%0aNOTES">[SEND SMS]</a>
+
 		</div>
+	</div>
 </body>
 
 </html>
