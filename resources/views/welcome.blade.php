@@ -442,7 +442,7 @@
 				</div>
 				<br /><br />
 				<a class="btn btn-blue text-gray-200"
-					href="sms:+18085011060?&body=NAME%0aPHONE%0aADDRESS%0aCONDITION%0aNOTES">START</a>
+					href="sms:+18085011060?&body=NAME%0aPHONE%0aADDRESS%0aCONDITION%0aNOTES">[SEND SMS]</a>
 
 			</div>
 		</div>
