@@ -61,7 +61,7 @@ class TicketController extends Controller
                 'body' => $body,
                 'status' => 'issue',
                 'from' => $request->From,
-                'everything' => $request->all()
+                'everything' => json_encode($request->all())
             ]);
         } else {
             $ticket = Ticket::create([
@@ -73,7 +73,7 @@ class TicketController extends Controller
                 'body' => $body,
                 'status' => 'new',
                 'from' => $request->From,
-                'everything' => $request->all()
+                'everything' => json_encode($request->all())
             ]);
         }
     }
