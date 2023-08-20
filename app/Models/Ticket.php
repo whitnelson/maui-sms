@@ -17,4 +17,10 @@ class Ticket extends Model
         'everything',
         'from'
     ];
+
+    function getGoogleMapsLinkAttribute()
+    {
+        $address = urlencode($this->address);
+        return "https://www.google.com/maps/search/?api=1&query=$address";
+    }
 }
