@@ -17,4 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/sms_webhook', [TicketController::class, 'smsWebhook']);
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+Route::post('/sms_webhook', 'App\Http\Controllers\TicketController@smsWebhook');
+
+require __DIR__ . '/auth.php';

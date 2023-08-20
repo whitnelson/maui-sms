@@ -17,7 +17,7 @@ desc 'install'
 task :install do
     on roles(:web) do
         within release_path do
-			#execute :ln, "-s #{shared_path}/storage #{release_path}/storage"
+			execute :ln, "-s #{shared_path}/storage #{release_path}/storage"
             execute :composer, "install --quiet --optimize-autoloader"
             execute :chmod, "u+x artisan" # make artisan executable
             execute :php, "artisan migrate --force"
@@ -39,15 +39,15 @@ end
 
 after :install, 'deploy:fix_permissions'
 
-# desc "node preprosessing"
-# task :node_preprosessing do
-#   on roles(:web) do
-#     within release_path  do
-# 			execute "cd #{release_path} && source ~/.nvm/nvm.sh && npm install && npm run prod"
-#     end
-#   end
-# end
+desc "node preprosessing"
+task :node_preprosessing do
+  on roles(:web) do
+    within release_path  do
+			execute "cd #{release_path} && source ~/.nvm/nvm.sh && npm install && npm run prod"
+    end
+  end
+end
 
-# after :fix_permissions, 'deploy:node_preprosessing'
+after :fix_permissions, 'deploy:node_preprosessing'
 
 end
