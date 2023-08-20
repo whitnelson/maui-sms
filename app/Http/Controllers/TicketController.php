@@ -13,7 +13,9 @@ class TicketController extends Controller
 
         $body = $request->Text;
 
-        $parts = explode(',', $body);
+        // Allow for multiple different delimiters
+        $body = str_replace("\n", '$', $body);
+        $parts = explode('$', $body);
 
         if (count($parts) < 2) {
             $ticket = Ticket::create([
