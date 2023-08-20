@@ -7,6 +7,45 @@ use App\Models\Ticket;
 
 class TicketController extends Controller
 {
+
+    // Index method which returns tickets in layout
+    public function index()
+    {
+        return view('tickets.index', [
+            'tickets' => Ticket::all()
+        ]);
+    }
+
+    // show method
+    public function show($id)
+    {
+        return Ticket::find($id);
+    }
+
+    // store method
+    public function store(Request $request)
+    {
+        return Ticket::create($request->all());
+    }
+
+    // update method
+    public function update(Request $request, $id)
+    {
+        $ticket = Ticket::findOrFail($id);
+        $ticket->update($request->all());
+
+        return $ticket;
+    }
+
+    // delete method
+    public function delete(Request $request, $id)
+    {
+        $ticket = Ticket::findOrFail($id);
+        $ticket->delete();
+
+        return 204;
+    }
+
     // smsWebhook method
     public function smsWebhook(Request $request)
     {

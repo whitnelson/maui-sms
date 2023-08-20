@@ -13,6 +13,7 @@ class Ticket extends Model
         'condition',
         'description',
         'body',
-        'status'
+        'status',
+        'everything',
     ];
 }

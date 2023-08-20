@@ -21,4 +21,6 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::get('/tickets', 'App\Http\Controllers\TicketController@index')->middleware(['auth'])->name('tickets');
+
 require __DIR__ . '/auth.php';
