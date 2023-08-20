@@ -13,6 +13,11 @@ class TicketController extends Controller
 
         $body = $request->Text;
 
+        $ticket = Ticket::create([
+            'body' => $body
+        ]);
+
+        /*
         $parts = explode(',', $body);
 
         if (count($parts) < 2) {
@@ -29,5 +34,6 @@ class TicketController extends Controller
                 'body' => $body
             ]);
         }
+        */
     }
 }
