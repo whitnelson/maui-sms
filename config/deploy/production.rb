@@ -17,7 +17,7 @@ desc 'install'
 task :install do
     on roles(:web) do
         within release_path do
-			execute :ln, "-s #{shared_path}/storage #{release_path}/storage"
+			#execute :ln, "-s #{shared_path}/storage #{release_path}/storage"
             execute :composer, "install --quiet --optimize-autoloader"
             execute :chmod, "u+x artisan" # make artisan executable
             #execute :php, "artisan migrate --force"
