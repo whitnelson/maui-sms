@@ -13,10 +13,10 @@
 						<b>Ticket #{{ $ticket->id }}</b><br />
 						Name: {{ $ticket->name }}<br />
 						Phone: {{ $ticket->phone }}<br />
-						Address: <a href={{ $ticket->google_maps_link }}"
+						Address: <a href="{{ $ticket->google_maps_link }}"
 							target="_blank">{{ $ticket->address }}</a><br />
 						Condition: {{ $ticket->condition }}<br />
-						Notes: {{ $ticket->notes }}
+						Notes: {{ $ticket->desciption }}
 					</div>
 				</div>
 			</div>
