@@ -18,17 +18,21 @@ class TicketController extends Controller
         if (count($parts) < 2) {
             $ticket = Ticket::create([
                 'body' => $body,
-                'status' => 'issue'
+                'status' => 'issue',
+                'from' => $request->From,
+                'everything' => $request->all()
             ]);
         } else {
             $ticket = Ticket::create([
-                'name' => isset($parts[0]) ? $parts[0] : '',
-                'phone' => isset($parts[1]) ? $parts[1] : '',
-                'address' => isset($parts[2]) ? $parts[2] : '',
-                'condition' => isset($parts[3]) ? $parts[3] : '',
-                'description' => isset($parts[4]) ? $parts[4] : '',
+                'name' => isset($parts[0]) ? trim($parts[0]) : '',
+                'phone' => isset($parts[1]) ? trim($parts[1]) : '',
+                'address' => isset($parts[2]) ? trim($parts[2]) : '',
+                'condition' => isset($parts[3]) ? trim($parts[3]) : '',
+                'description' => isset($parts[4]) ? trim($parts[4]) : '',
                 'body' => $body,
-                'status' => 'new'
+                'status' => 'new',
+                'from' => $request->From,
+                'everything' => $request->all()
             ]);
         }
     }

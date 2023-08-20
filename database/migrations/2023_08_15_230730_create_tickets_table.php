@@ -21,7 +21,9 @@ class CreateTicketsTable extends Migration
             $table->string('condition', 256)->nullable()->default(null);
             $table->text('description')->nullable()->default(null);
             $table->text('body');
+            $table->text('everything');
             $table->string('status', 32)->nullable()->default(null);
+            $table->string('from', 32)->nullable()->default(null);
             $table->timestamps();
         });
     }
