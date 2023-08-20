@@ -13,17 +13,12 @@ class TicketController extends Controller
 
         $body = $request->Text;
 
-        $ticket = Ticket::create([
-            'body' => $body,
-            'status' => 'new'
-        ]);
-
-        /*
         $parts = explode(',', $body);
 
         if (count($parts) < 2) {
             $ticket = Ticket::create([
-                'body' => $body
+                'body' => $body,
+                'status' => 'issue'
             ]);
         } else {
             $ticket = Ticket::create([
@@ -32,9 +27,9 @@ class TicketController extends Controller
                 'address' => isset($parts[2]) ? $parts[2] : '',
                 'condition' => isset($parts[3]) ? $parts[3] : '',
                 'description' => isset($parts[4]) ? $parts[4] : '',
-                'body' => $body
+                'body' => $body,
+                'status' => 'new'
             ]);
         }
-        */
     }
 }

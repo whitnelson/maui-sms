@@ -12,6 +12,7 @@ class Ticket extends Model
         'address',
         'condition',
         'description',
-        'body'
+        'body',
+        'status'
     ];
 }
